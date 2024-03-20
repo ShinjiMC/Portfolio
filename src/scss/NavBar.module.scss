@@ -1,0 +1,132 @@
+.navBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.3rem 0%;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(50px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    padding: 1.3rem 0;
+  }
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(50px);
+  z-index: -1;
+}
+
+.logoContainer {
+  padding-left: 1.3rem;
+  display: flex;
+  align-items: center;
+  height: 100%;
+
+  @media (max-width: 768px) {
+    justify-content: center;
+    padding: 0;
+    margin-bottom: 1rem;
+  }
+}
+
+.logo {
+  height: 5vw;
+  transition: height 0.3s ease-in-out;
+
+  &:hover {
+    filter: drop-shadow(0 0 0.5em #e674745b);
+  }
+
+  @media (max-width: 768px) {
+    height: 10vw;
+  }
+}
+
+.menuContainer {
+  flex: 3;
+  position: relative;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+  }
+}
+
+.menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(50px);
+    padding-top: 1rem;
+  }
+}
+
+.menu li {
+  display: inline-block;
+  margin-right: 20px;
+
+  @media (max-width: 768px) {
+    display: block;
+    margin: 1.5rem 0;
+  }
+}
+
+.menu a {
+  font-size: 1.15rem;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 2.5rem;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+    margin: 0;
+  }
+}
+
+.icon {
+  display: none;
+  height: 5vw;
+  @media (max-width: 768px) {
+    display: inline-flex;
+    font-size: 2.8rem;
+    color: #fff;
+    cursor: pointer;
+    margin-bottom: 1rem;
+  }
+}
+
+.languageSelectorContainer {
+  padding-right: 1.3rem;
+  display: flex; /* Para alinear el selector de idioma hacia la derecha */
+  justify-content: flex-end; /* Para alinear el contenido hacia la derecha */
+}
