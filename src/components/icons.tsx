@@ -12,7 +12,7 @@ export const Logo: React.FC<CustomIconProps> = ({
   ...props
 }) => (
   <svg
-    width="96"
+    width="70"
     height={height}
     viewBox="0 0 96 126"
     fill="none"

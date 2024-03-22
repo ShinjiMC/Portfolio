@@ -10,19 +10,19 @@ const NavBar: React.FC = () => {
   const { t } = useTranslation();
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
-
   return (
-    <>
+    <header className={styles.header}>
       <nav className={styles.navbar}>
-        <div className={styles.selector}>
-          <LanguageSelector />
-        </div>
         <div className={styles.nav_container}>
-          <span>Shinji</span>
-          <span className={styles.icon}>
-            <Logo color="white" height="60" />
-          </span>
-
+          <div className={styles.selector}>
+            <LanguageSelector />
+          </div>
+          <div className={styles.logo_container}>
+            <span className={styles.text}>Portfolio</span>
+            <span className={styles.icon}>
+              <Logo color="white" height="2rem" />
+            </span>
+          </div>
           <ul
             className={
               click ? `${styles.nav_menu} ${styles.active}` : styles.nav_menu
@@ -62,7 +62,7 @@ const NavBar: React.FC = () => {
           </div>
         </div>
       </nav>
-    </>
+    </header>
   );
 };
 
