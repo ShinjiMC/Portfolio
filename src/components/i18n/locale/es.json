@@ -3,5 +3,17 @@
     "Home": "Inicio",
     "About": "Sobre",
     "Contact": "Contacto"
+  },
+  "Hero": {
+    "Greatting": "Hola, soy",
+    "Name": "Braulio Maldonado",
+    "Dev1": "Web Developer",
+    "Dev2": "Mobile Developer",
+    "Dev3": "Software Developer",
+    "Dev4": "UI/UX Designer",
+    "Dev5": "Game Developer",
+    "Description": "Soy un desarrollador con pasión por crear y desarrollar cosas nuevas. Siempre estoy buscando nuevos desafíos y oportunidades para aprender y crecer.",
+    "Hire": "Contrátame",
+    "Download": "Descargar CV"
   }
 }

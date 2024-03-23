@@ -20,7 +20,7 @@ const NavBar: React.FC = () => {
           <div className={styles.logo_container}>
             <span className={styles.text}>Portfolio</span>
             <span className={styles.icon}>
-              <Logo color="white" height="2rem" />
+              <Logo color="white" className={styles.logo} />
             </span>
           </div>
           <ul

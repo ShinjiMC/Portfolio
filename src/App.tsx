@@ -2,7 +2,7 @@ import { useState } from "react";
 import reactLogo from "./assets/logo.svg";
 import viteLogo from "./assets/logo_black.svg";
 import NavBar from "./components/NavBar";
-import Header from "./components/Header";
+import Hero from "./components/Hero";
 import "./App.css";
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
   return (
     <>
       <NavBar />
-      <Header />
+      <Hero />
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />

@@ -3,5 +3,17 @@
     "Home": "Home",
     "About": "About",
     "Contact": "Contact"
+  },
+  "Hero": {
+    "Greatting": "Hello, I'm",
+    "Name": "Braulio Maldonado",
+    "Dev1": "Web Developer",
+    "Dev2": "Mobile Developer",
+    "Dev3": "Software Developer",
+    "Dev4": "UI/UX Designer",
+    "Dev5": "Game Developer",
+    "Description": "I am a developer with a passion for creating and developing new things. I am always looking for new challenges and opportunities to learn and grow.",
+    "Hire": "Hire Me",
+    "Download": "Download CV"
   }
 }
