@@ -4,7 +4,7 @@ import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import { Link, BrowserRouter } from "react-router-dom";
 import { Logo } from "./icons";
-import styles from "../scss/Header.module.scss";
+import styles from "../scss/Hero.module.scss";
 
 const Hero: React.FC = () => {
   const { t } = useTranslation();

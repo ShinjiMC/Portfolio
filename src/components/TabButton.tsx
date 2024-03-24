@@ -21,10 +21,8 @@ const TabButton: React.FC<TabButtonProps> = ({
   const buttonClasses = active ? styles.textWhite : styles.textADB7BE;
 
   return (
-    <button onClick={selectTab}>
-      <p className={`mr-3 font-semibold hover:text-white ${buttonClasses}`}>
-        {children}
-      </p>
+    <button onClick={selectTab} className={styles.btn}>
+      <p className={`${styles.name} ${buttonClasses}`}>{children}</p>
       <motion.div
         animate={active ? "active" : "default"}
         variants={variants}

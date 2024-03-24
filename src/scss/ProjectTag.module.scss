@@ -1,0 +1,20 @@
+.btnSelected {
+  color: #ffffff;
+  border-color: #38b2ac;
+}
+
+.btn {
+  color: #adb7be;
+  border-color: #718096;
+  &:hover {
+    border-color: #ffffff;
+  }
+}
+
+.btnContainer {
+  border-radius: 9999px;
+  border-width: 2px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.25rem;
+  cursor: pointer;
+}

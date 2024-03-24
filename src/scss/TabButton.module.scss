@@ -1,5 +1,13 @@
+.btn {
+  cursor: pointer;
+  background-color: transparent;
+  background-image: none;
+  text-transform: none;
+  border: none;
+}
+
 .name {
-  margin-right: 1rem;
+  margin-right: 0.75rem;
   font-weight: 600;
   &:hover {
     color: white;
@@ -14,8 +22,8 @@
 }
 
 .motion {
-  height: 1px;
-  //background-color: #primary-500;
+  height: 0.25rem;
+  background: linear-gradient(to right, #38b2ac, #805ad5);
   margin-top: 0.5rem;
   margin-right: 1rem;
 }

@@ -1,19 +1,26 @@
 import React, { useState, useTransition } from "react";
 import { Logo } from "./icons";
 import TabButton from "./TabButton";
+import styles from "../scss/About.module.scss";
 
 const TAB_DATA = [
   {
     title: "Skills",
     id: "skills",
     content: (
-      <ul className="list-disc pl-2">
+      <ul className={styles.list}>
         <li>Node.js</li>
         <li>Express</li>
         <li>PostgreSQL</li>
-        <li>Sequelize</li>
+        <li>MongoDB</li>
+        <li>MySQL</li>
         <li>JavaScript</li>
         <li>React</li>
+        <li>Java</li>
+        <li>C/C++</li>
+        <li>TypeScript</li>
+        <li>Python</li>
+        <li>Docker</li>
       </ul>
     ),
   },
@@ -21,9 +28,9 @@ const TAB_DATA = [
     title: "Education",
     id: "education",
     content: (
-      <ul className="list-disc pl-2">
+      <ul className={styles.list}>
         <li>Fullstack Academy of Code</li>
-        <li>University of California, Santa Cruz</li>
+        <li>University of Saint Agustin of Arequipa, Perú</li>
       </ul>
     ),
   },
@@ -31,7 +38,7 @@ const TAB_DATA = [
     title: "Certifications",
     id: "certifications",
     content: (
-      <ul className="list-disc pl-2">
+      <ul className={styles.list}>
         <li>AWS Cloud Practitioner</li>
         <li>Google Professional Cloud Developer</li>
       </ul>
@@ -50,12 +57,12 @@ const About: React.FC = () => {
   };
 
   return (
-    <section className="text-white" id="about">
-      <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-        <Logo color="white" height="500" />
-        <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
-          <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
-          <p className="text-base lg:text-lg">
+    <section className={styles.about_container} id="about">
+      <div className={styles.container}>
+        <Logo color="white" className={styles.image} />
+        <div className={styles.content}>
+          <h2 className={styles.title}>About Me</h2>
+          <p className={styles.text}>
             I am a full stack web developer with a passion for creating
             interactive and responsive web applications. I have experience
             working with JavaScript, React, Redux, Node.js, Express, PostgreSQL,
@@ -63,7 +70,7 @@ const About: React.FC = () => {
             looking to expand my knowledge and skill set. I am a team player and
             I am excited to work with others to create amazing applications.
           </p>
-          <div className="flex flex-row justify-start mt-8">
+          <div className={styles.flex_container}>
             <TabButton
               selectTab={() => handleTabChange("skills")}
               active={tab === "skills"}
@@ -86,8 +93,8 @@ const About: React.FC = () => {
               Certifications{" "}
             </TabButton>
           </div>
-          <div className="mt-8">
-            {TAB_DATA.find((t) => t.id === tab).content}
+          <div className={styles.find}>
+            {TAB_DATA.find((t) => t.id === tab)?.content ?? null}
           </div>
         </div>
       </div>

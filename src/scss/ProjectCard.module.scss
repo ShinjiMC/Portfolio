@@ -1,0 +1,9 @@
+.container {
+  height: 13rem;
+  position: relative;
+  border-top-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
+  @media (min-width: 768px) {
+    height: 18rem;
+  }
+}
