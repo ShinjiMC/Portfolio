@@ -89,7 +89,7 @@ export const MenuCloseIcon: React.FC<CustomIconProps> = ({
 );
 
 export const CodeBracketIcon: React.FC<CustomIconProps> = ({
-  color = "#5A1616",
+  color = "#fff",
   height = "1em",
   ...props
 }) => (
@@ -97,14 +97,35 @@ export const CodeBracketIcon: React.FC<CustomIconProps> = ({
     xmlns="http://www.w3.org/2000/svg"
     version="1.1"
     viewBox="0 0 20 20"
-    fill={color}
     {...props}
   >
     <path
       fill="currentColor"
-      fill-rule="evenodd"
+      fillRule="evenodd"
       d="M6.28 5.22a.75.75 0 0 1 0 1.06L2.56 10l3.72 3.72a.75.75 0 0 1-1.06 1.06L.97 10.53a.75.75 0 0 1 0-1.06l4.25-4.25a.75.75 0 0 1 1.06 0Zm7.44 0a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L17.44 10l-3.72-3.72a.75.75 0 0 1 0-1.06Zm-2.343-3.209a.75.75 0 0 1 .612.867l-2.5 14.5a.75.75 0 0 1-1.478-.255l2.5-14.5a.75.75 0 0 1 .866-.612Z"
-      clip-rule="evenodd"
+      clipRule="evenodd"
     />
+  </svg>
+);
+
+export const EyeIcon: React.FC<CustomIconProps> = ({
+  color = "#fff",
+  height = "1em",
+  ...props
+}) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    version="1.1"
+    viewBox="0 0 20 20"
+    {...props}
+  >
+    <g fill="currentColor">
+      <path d="M10 12a2 2 0 1 0 0-4a2 2 0 0 0 0 4" />
+      <path
+        fillRule="evenodd"
+        d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10M14 10a4 4 0 1 1-8 0a4 4 0 0 1 8 0"
+        clipRule="evenodd"
+      />
+    </g>
   </svg>
 );

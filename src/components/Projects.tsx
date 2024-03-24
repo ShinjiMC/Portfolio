@@ -2,6 +2,7 @@ import React, { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import ProjectTag from "./ProjectTag";
 import ProjectCard from "./ProjectCard";
+import styles from "../scss/Projects.module.scss";
 
 const projectsData = [
   {
@@ -17,7 +18,7 @@ const projectsData = [
     id: 2,
     title: "Potography Portfolio Website",
     description: "Project 2 description",
-    image: "/images/projects/2.png",
+    image: "logo.svg",
     tag: ["All", "Web"],
     gitUrl: "/",
     previewUrl: "/",
@@ -78,10 +79,8 @@ const Projects: React.FC = () => {
 
   return (
     <section id="projects">
-      <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
-        My Projects
-      </h2>
-      <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
+      <h2 className={styles.title}>My Projects</h2>
+      <div className={styles.tags}>
         <ProjectTag
           onClick={handleTagChange}
           name="All"
@@ -98,7 +97,7 @@ const Projects: React.FC = () => {
           isSelected={tag === "Mobile"}
         />
       </div>
-      <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
+      <ul ref={ref} className={styles.projects}>
         {filteredProjects.map((project, index) => (
           <motion.li
             key={index}
