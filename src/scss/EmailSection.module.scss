@@ -1,0 +1,118 @@
+.section {
+  display: grid;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  gap: 1rem;
+  position: relative;
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+}
+
+.circle {
+  background-image: radial-gradient(
+    ellipse at center,
+    var(--mi-gradient-color-2)
+  );
+  background-color: rgba(#388bb2, 0.8);
+  border-radius: 9999px;
+  height: 20rem;
+  width: 20rem;
+  z-index: 0;
+  filter: blur(16px);
+  position: absolute;
+  top: 75%;
+  left: -4rem;
+  transform: translate(-50%, -50%);
+}
+
+.container {
+  z-index: 10;
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.desc {
+  color: #adb7be;
+  margin-bottom: 1rem;
+  max-width: 28rem;
+}
+
+.socials {
+  gap: 0.5rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.icon {
+  height: 2.5rem;
+  width: 2.5rem;
+  color: #ffffff;
+  cursor: pointer;
+  &:hover {
+    color: #adb7be;
+  }
+}
+.success {
+  color: #10b981;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.subContainer {
+  margin-bottom: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.labelContainer {
+  color: #ffffff;
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.inputContainer {
+  background-color: #18191e;
+  border: 1px solid #33353f;
+  color: #f3f4f6;
+  font-size: 0.875rem;
+  border-radius: 0.5rem;
+  display: block;
+  width: 100%;
+  padding: 0.625rem;
+
+  &::placeholder {
+    color: #9ca2a9;
+  }
+}
+
+.buttonContainer {
+  background-color: #38b2ac; // Este es un valor de ejemplo para bg-primary-500
+  color: white;
+  font-weight: 500;
+  padding-top: 0.625rem; // py-2.5
+  padding-bottom: 0.625rem; // py-2.5
+  border-radius: 0.5rem; // rounded-lg
+  border-color: #38b2ac;
+  width: 100%; // w-full
+  cursor: pointer;
+  &:hover {
+    background-color: #2d918c; // Este es un valor de ejemplo para bg-primary-600
+  }
+}

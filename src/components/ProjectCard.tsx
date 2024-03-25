@@ -1,5 +1,4 @@
 import React from "react";
-//import { CodeBracketIcon, EyeIcon } from "@heroicons/react/24/outline";
 import { Link, BrowserRouter } from "react-router-dom";
 import { CodeBracketIcon, EyeIcon } from "./icons";
 import styles from "../scss/ProjectCard.module.scss";
