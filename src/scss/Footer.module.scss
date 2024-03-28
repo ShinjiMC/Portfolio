@@ -1,0 +1,23 @@
+.footer {
+  border: 1px solid #33353f;
+  border-top-color: #33353f;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  z-index: 10;
+  color: white;
+}
+
+.container {
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.text {
+  color: #718096;
+}
+.logo {
+  height: 1.5rem;
+}
