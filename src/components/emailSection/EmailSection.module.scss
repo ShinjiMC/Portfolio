@@ -28,8 +28,10 @@
   top: 75%;
   left: -4rem;
   transform: translate(-30%, -40%);
+  display: none;
   @media (min-width: 768px) {
     background-color: rgba(#388bb2, 0.2);
+    display: block;
   }
 }
 
@@ -95,6 +97,7 @@
 .formContainer {
   display: flex;
   flex-direction: column;
+  z-index: 1;
 }
 
 .subContainer {
