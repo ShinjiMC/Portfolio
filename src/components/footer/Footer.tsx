@@ -1,6 +1,6 @@
 import React from "react";
-import { Logo } from "./icons";
-import styles from "../scss/Footer.module.scss";
+import { Logo } from "../icons";
+import styles from "./Footer.module.scss";
 
 const Footer: React.FC = () => {
   return (

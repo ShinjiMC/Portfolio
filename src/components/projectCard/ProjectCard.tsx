@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, BrowserRouter } from "react-router-dom";
-import { CodeBracketIcon, EyeIcon } from "./icons";
-import styles from "../scss/ProjectCard.module.scss";
+import { CodeBracketIcon, EyeIcon } from "../icons";
+import styles from "./ProjectCard.module.scss";
 
 interface ProjectCardProps {
   imgUrl: string;

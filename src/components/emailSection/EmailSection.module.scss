@@ -66,10 +66,30 @@
     color: #adb7be;
   }
 }
-.success {
-  color: #10b981;
-  font-size: 0.875rem;
-  margin-top: 0.5rem;
+
+.success,
+.error {
+  position: fixed; /* Posición fija respecto al viewport */
+  top: 5rem; /* Espaciado desde la parte superior */
+  right: 1rem; /* Espaciado desde la derecha */
+  z-index: 1050; /* Asegúrate de que esté por encima de otros elementos */
+  color: #10b981; /* Color para éxito */
+  background-color: #18191e; /* Fondo para que destaque */
+  border-radius: 0.375rem; /* Bordes redondeados */
+  padding: 0.5rem; /* Espaciado interno */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); /* Sombra para resaltar */
+  animation: fadeOut 4s ease-in-out forwards; /* Animación para desvanecer */
+}
+
+.error {
+  color: #ef4444; /* Color rojo para errores */
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
 .formContainer {

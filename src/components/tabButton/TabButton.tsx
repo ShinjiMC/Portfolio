@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import styles from "../scss/TabButton.module.scss";
+import styles from "./TabButton.module.scss";
 
 interface TabButtonProps {
   active: boolean;

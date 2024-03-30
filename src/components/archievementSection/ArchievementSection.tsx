@@ -1,5 +1,5 @@
 import React, { Suspense } from "react";
-import styles from "../scss/ArchievementSection.module.scss";
+import styles from "./ArchievementSection.module.scss";
 
 const AnimatedNumbers = React.lazy(() => import("react-animated-numbers"));
 

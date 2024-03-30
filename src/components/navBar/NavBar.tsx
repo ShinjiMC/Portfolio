@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { Link, BrowserRouter } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import LanguageSelector from "./i18n/LanguageSelector";
-import { Logo, MenuOpenIcon, MenuCloseIcon } from "./icons";
-import styles from "../scss/NavBar.module.scss";
-import "./i18n";
+import LanguageSelector from "../i18n/LanguageSelector";
+import { Logo, MenuOpenIcon, MenuCloseIcon } from "../icons";
+import styles from "./NavBar.module.scss";
+import "../i18n";
 
 const NavBar: React.FC = () => {
   const { t } = useTranslation();

@@ -1,7 +1,7 @@
 import React, { useState, useTransition } from "react";
-import { Logo } from "./icons";
-import TabButton from "./TabButton";
-import styles from "../scss/About.module.scss";
+import { Logo } from "../icons";
+import TabButton from "../tabButton/TabButton";
+import styles from "./About.module.scss";
 
 const TAB_DATA = [
   {

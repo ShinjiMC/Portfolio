@@ -1,8 +1,8 @@
 import React, { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import ProjectTag from "./ProjectTag";
-import ProjectCard from "./ProjectCard";
-import styles from "../scss/Projects.module.scss";
+import ProjectTag from "../projectTag/ProjectTag";
+import ProjectCard from "../projectCard/ProjectCard";
+import styles from "./ProjectSection.module.scss";
 
 const projectsData = [
   {
@@ -61,7 +61,7 @@ const projectsData = [
   },
 ];
 
-const Projects: React.FC = () => {
+const ProjectSection: React.FC = () => {
   const [tag, setTag] = useState("All");
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -121,4 +121,4 @@ const Projects: React.FC = () => {
   );
 };
 
-export default Projects;
+export default ProjectSection;

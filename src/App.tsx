@@ -1,11 +1,11 @@
-import NavBar from "./components/NavBar";
-import Hero from "./components/Hero";
-import About from "./components/About";
-import Projects from "./components/Projects";
-import EmailSection from "./components/EmailSection";
-import AchievementSection from "./components/ArchievementSection";
-import Footer from "./components/Footer";
-import styles from "./scss/App.module.scss";
+import NavBar from "./components/navBar/NavBar";
+import Hero from "./components/hero/Hero";
+import About from "./components/about/About";
+import EmailSection from "./components/emailSection/EmailSection";
+import AchievementSection from "./components/archievementSection/ArchievementSection";
+import Footer from "./components/footer/Footer";
+import ProjectSection from "./components/projectSection/ProjectSection";
+import styles from "./App.module.scss";
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
         <Hero />
         <AchievementSection />
         <About />
-        <Projects />
+        <ProjectSection />
         <EmailSection />
         <Footer />
       </div>

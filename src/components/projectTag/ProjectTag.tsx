@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../scss/ProjectTag.module.scss";
+import styles from "./ProjectTag.module.scss";
 
 interface ProjectTagProps {
   name: string;
