@@ -70,3 +70,11 @@
     }
   }
 }
+
+@media screen and (max-width: 960px) {
+  .language_selector {
+    .button_main {
+      padding: 0.25rem 1rem;
+    }
+  }
+}

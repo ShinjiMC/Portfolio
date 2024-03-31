@@ -105,6 +105,8 @@
 
 .logo {
   height: 2rem;
+  width: 2rem;
+  color: #ffffff;
 }
 
 .selector {
@@ -119,6 +121,12 @@
   gap: 10px;
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+.iconMenu {
+  color: #ffffff;
+  height: 2rem;
+  width: 2rem;
 }
 
 @media screen and (max-width: 960px) {

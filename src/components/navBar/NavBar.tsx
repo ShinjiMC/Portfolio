@@ -25,7 +25,7 @@ const NavBar: React.FC = () => {
           <div className={styles.logo_container}>
             <span className={styles.text}>Portfolio</span>
             <span className={styles.icon}>
-              <Logo color="white" className={styles.logo} />
+              <Logo className={styles.logo} />
             </span>
           </div>
           <ul
@@ -68,11 +68,11 @@ const NavBar: React.FC = () => {
           <div className={styles.nav_icon} onClick={handleClick}>
             {click ? (
               <span className={styles.icon}>
-                <MenuCloseIcon color="white" height="30" />
+                <MenuCloseIcon className={styles.iconMenu} />
               </span>
             ) : (
               <span className={styles.icon}>
-                <MenuOpenIcon color="white" height="30" />
+                <MenuOpenIcon className={styles.iconMenu} />
               </span>
             )}
           </div>

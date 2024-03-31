@@ -69,7 +69,7 @@ const About: React.FC = () => {
   return (
     <section className={styles.about_container} id="about">
       <div className={styles.container}>
-        <Logo color="white" className={styles.image} />
+        <Logo className={styles.image} />
         <div className={styles.content}>
           <h2 className={styles.title}>{t("About.Title")}</h2>
           <p className={styles.text}>{t("About.Description")}</p>

@@ -59,7 +59,7 @@ const Hero: React.FC = () => {
           className={styles.motion_image}
         >
           <div className={styles.circle_img}>
-            <Logo color="white" className={styles.logo} />
+            <Logo className={styles.logo} />
           </div>
         </motion.div>
       </div>
