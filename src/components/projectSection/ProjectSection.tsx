@@ -3,65 +3,33 @@ import { motion, useInView } from "framer-motion";
 import ProjectTag from "../projectTag/ProjectTag";
 import ProjectCard from "../projectCard/ProjectCard";
 import styles from "./ProjectSection.module.scss";
-
-const projectsData = [
-  {
-    id: 1,
-    title: "React Portfolio Website",
-    description: "Project 1 description",
-    image: "./images/projects/1.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
-  {
-    id: 2,
-    title: "Potography Portfolio Website",
-    description: "Project 2 description",
-    image: "./images/projects/1.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
-  {
-    id: 3,
-    title: "E-commerce Application",
-    description: "Project 3 description",
-    image: "./images/projects/1.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
-  {
-    id: 4,
-    title: "Food Ordering Application",
-    description: "Project 4 description",
-    image: "./images/projects/1.png",
-    tag: ["All", "Mobile"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
-  {
-    id: 5,
-    title: "React Firebase Template",
-    description: "Authentication and CRUD operations",
-    image: "./images/projects/1.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
-  {
-    id: 6,
-    title: "Full-stack Roadmap",
-    description: "Project 5 description",
-    image: "./images/projects/1.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
-];
+import { useTranslation } from "react-i18next";
+import "../i18n";
 
 const ProjectSection: React.FC = () => {
+  const { t } = useTranslation();
+
+  const projectsData = [
+    {
+      id: 1,
+      title: t("ProjectData.title1"),
+      description: t("ProjectData.desc1"),
+      image: "./images/projects/1.png",
+      tag: ["All", "Web"],
+      gitUrl: "/",
+      previewUrl: "/",
+    },
+    {
+      id: 2,
+      title: t("ProjectData.title2"),
+      description: t("ProjectData.desc2"),
+      image: "./images/projects/1.png",
+      tag: ["All", "Mobile"],
+      gitUrl: "/",
+      previewUrl: "/",
+    },
+  ];
+
   const [tag, setTag] = useState("All");
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -79,22 +47,25 @@ const ProjectSection: React.FC = () => {
 
   return (
     <section id="projects">
-      <h2 className={styles.title}>My Projects</h2>
+      <h2 className={styles.title}>{t("Project.Title")}</h2>
       <div className={styles.tags}>
         <ProjectTag
           onClick={handleTagChange}
           name="All"
           isSelected={tag === "All"}
+          text={t("Project.All")}
         />
         <ProjectTag
           onClick={handleTagChange}
           name="Web"
           isSelected={tag === "Web"}
+          text={t("Project.Web")}
         />
         <ProjectTag
           onClick={handleTagChange}
           name="Mobile"
           isSelected={tag === "Mobile"}
+          text={t("Project.Mobile")}
         />
       </div>
       <ul ref={ref} className={styles.projects}>

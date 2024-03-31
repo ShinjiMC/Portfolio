@@ -10,6 +10,11 @@ const NavBar: React.FC = () => {
   const { t } = useTranslation();
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
+  const handleInternalNavigation = (sectionId: string) => {
+    setClick(false);
+    const section = document.querySelector(sectionId);
+    if (section) section.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <header className={styles.header}>
       <nav className={styles.navbar}>
@@ -30,17 +35,28 @@ const NavBar: React.FC = () => {
           >
             <BrowserRouter>
               <li className={styles.nav_item}>
-                <Link to="/" onClick={handleClick}>
+                <Link to="#" onClick={() => handleInternalNavigation("#home")}>
                   {t("NavBar.Home")}
                 </Link>
               </li>
               <li className={styles.nav_item}>
-                <Link to="/about" onClick={handleClick}>
+                <Link to="#" onClick={() => handleInternalNavigation("#about")}>
                   {t("NavBar.About")}
                 </Link>
               </li>
               <li className={styles.nav_item}>
-                <Link to="/contact" onClick={handleClick}>
+                <Link
+                  to="#"
+                  onClick={() => handleInternalNavigation("#projects")}
+                >
+                  {t("NavBar.Projects")}
+                </Link>
+              </li>
+              <li className={styles.nav_item}>
+                <Link
+                  to="#"
+                  onClick={() => handleInternalNavigation("#contact")}
+                >
                   {t("NavBar.Contact")}
                 </Link>
               </li>

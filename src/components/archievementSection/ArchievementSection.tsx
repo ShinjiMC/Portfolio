@@ -1,30 +1,31 @@
 import React, { Suspense } from "react";
 import styles from "./ArchievementSection.module.scss";
+import { useTranslation } from "react-i18next";
+import "../i18n";
 
 const AnimatedNumbers = React.lazy(() => import("react-animated-numbers"));
-
-const achievementsList = [
-  {
-    metric: "Projects",
-    value: "100",
-    postfix: "+",
-  },
-  {
-    prefix: "~",
-    metric: "Users",
-    value: "100,000",
-  },
-  {
-    metric: "Awards",
-    value: "7",
-  },
-  {
-    metric: "Years",
-    value: "5",
-  },
-];
-
-const AchievementSection: React.FC = () => {
+const ArchievementSection: React.FC = () => {
+  const { t } = useTranslation();
+  const achievementsList = [
+    {
+      metric: t("Archievements.projects"),
+      value: "100",
+      postfix: "+",
+    },
+    {
+      prefix: "~",
+      metric: t("Archievements.users"),
+      value: "100,000",
+    },
+    {
+      metric: t("Archievements.awards"),
+      value: "7",
+    },
+    {
+      metric: t("Archievements.years"),
+      value: "5",
+    },
+  ];
   return (
     <section className={styles.section}>
       <div className={styles.container}>
@@ -56,4 +57,4 @@ const AchievementSection: React.FC = () => {
   );
 };
 
-export default AchievementSection;
+export default ArchievementSection;

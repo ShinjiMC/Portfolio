@@ -9,7 +9,7 @@ import styles from "./Hero.module.scss";
 const Hero: React.FC = () => {
   const { t } = useTranslation();
   return (
-    <section className={styles.section}>
+    <section id="home" className={styles.section}>
       <div className={styles.container}>
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}

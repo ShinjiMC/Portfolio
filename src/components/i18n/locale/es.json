@@ -2,6 +2,7 @@
   "NavBar": {
     "Home": "Inicio",
     "About": "Sobre",
+    "Projects": "Projectos",
     "Contact": "Contacto"
   },
   "Hero": {
@@ -15,5 +16,56 @@
     "Description": "Soy un desarrollador con pasión por crear y desarrollar cosas nuevas. Siempre estoy buscando nuevos desafíos y oportunidades para aprender y crecer.",
     "Hire": "Contrátame",
     "Download": "Descargar CV"
+  },
+  "About": {
+    "Title": "Sobre mí",
+    "Description": "Soy un desarrollador con pasión por crear y desarrollar cosas nuevas. Siempre estoy buscando nuevos desafíos y oportunidades para aprender y crecer. Tengo experiencia en desarrollo web, desarrollo móvil, desarrollo de software, diseño UI/UX y desarrollo de juegos. Siempre estoy buscando nuevos desafíos y oportunidades para aprender y crecer.",
+    "Skills": "Habilidades",
+    "Education": "Educación",
+    "Certifications": "Certificaciones"
+  },
+  "TABDATA": {
+    "ed1": "Colegio Salesiano Don Bosco de Arequipa",
+    "ed2": "Universidad Nacional de San Agustín de Arequipa, Perú",
+    "cert1": "Diseño Digital 2020 de FABLAB PERÚ",
+    "cert2": "Introducción a IoT de Cisco Networking Academy®",
+    "cert3": "PCAP - Certificación Asociada en Programación Python, del OpenEDG Python Institute",
+    "cert4": "Programa de Habilidades Digitales y Socioemocionales - FASE 1 de Cisco Networking Academy®",
+    "cert5": "Back-End Developer Capstone de Meta",
+    "cert6": "The Full Stack de Meta",
+    "cert7": "APIs de Meta",
+    "cert8": "Django Web Framework de Meta",
+    "cert9": "Seguridad Cibernética de Cisco Networking Academy®"
+  },
+  "Archievements": {
+    "projects": "Proyectos",
+    "users": "Usuarios",
+    "awards": "Premios",
+    "years": "Años"
+  },
+  "Email": {
+    "Title": "Conéctate",
+    "Description": "Actualmente estoy buscando nuevas oportunidades, mi bandeja de entrada está siempre abierta. Si tienes alguna pregunta o simplemente quieres saludar, ¡haré todo lo posible para responderte!",
+    "success": "¡Email enviado correctamente!",
+    "error": "Error al enviar el correo electrónico. Por favor, inténtalo de nuevo.",
+    "inputEmail": "Tu correo electrónico",
+    "inputSubject": "Asunto",
+    "exampleSubject": "Solo saludando",
+    "inputMessage": "Mensaje",
+    "exampleMessage": "Hablemos sobre...",
+    "send": "Enviar Mensaje"
+  },
+  "Footer": "© Braulio Maldonado. Todos los derechos reservados.",
+  "Project": {
+    "Title": "Mis Proyectos",
+    "All": "Todos",
+    "Web": "Web",
+    "Mobile": "Móvil"
+  },
+  "ProjectData": {
+    "title1": "Sitio web de portafolio en React",
+    "desc1": "Descripción del proyecto 1",
+    "title2": "Aplicación de pedidos de comida",
+    "desc2": "Descripción del proyecto 2"
   }
 }

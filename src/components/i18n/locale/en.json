@@ -2,6 +2,7 @@
   "NavBar": {
     "Home": "Home",
     "About": "About",
+    "Projects": "Projects",
     "Contact": "Contact"
   },
   "Hero": {
@@ -15,5 +16,56 @@
     "Description": "I am a developer with a passion for creating and developing new things. I am always looking for new challenges and opportunities to learn and grow.",
     "Hire": "Hire Me",
     "Download": "Download CV"
+  },
+  "About": {
+    "Title": "About Me",
+    "Description": "I am a developer with a passion for creating and developing new things. I am always looking for new challenges and opportunities to learn and grow. I have experience in web development, mobile development, software development, UI/UX design, and game development. I am always looking for new challenges and opportunities to learn and grow.",
+    "Skills": "Skills",
+    "Education": "Education",
+    "Certifications": "Certifications"
+  },
+  "TABDATA": {
+    "ed1": "College Salesiano Don Bosco of Arequipa",
+    "ed2": "National University of San Agustin of Arequipa, Peru",
+    "cert1": "Digital Design 2020 from FABLAB PERU",
+    "cert2": "Introduction to IoT from Cisco Networking Academy®",
+    "cert3": "PCAP - Certified Associate in Python Programming Certification, from the OpenEDG Python Institute",
+    "cert4": "Digital and Socioemotional Skills Program - PHASE 1 from Cisco Networking Academy®",
+    "cert5": "Back-End Developer Capstone from Meta",
+    "cert6": "The Full Stack from Meta",
+    "cert7": "APIs from Meta",
+    "cert8": "Django Web Framework from Meta",
+    "cert9": "Cybersecurity from Cisco Networking Academy®"
+  },
+  "Archievements": {
+    "projects": "Projects",
+    "users": "Users",
+    "awards": "Awards",
+    "years": "Years"
+  },
+  "Email": {
+    "Title": "Let's Connect",
+    "Description": "I'm currently looking for new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!",
+    "success": "Email sent successfully!",
+    "error": "Failed to send email. Please try again.",
+    "inputEmail": "Your email",
+    "inputSubject": "Subject",
+    "exampleSubject": "Just saying hi",
+    "inputMessage": "Message",
+    "exampleMessage": "Let's talk about...",
+    "send": "Send Message"
+  },
+  "Footer": "© Braulio Maldonado. All rights reserved.",
+  "Project": {
+    "Title": "My Projects",
+    "All": "All",
+    "Web": "Web",
+    "Mobile": "Mobile"
+  },
+  "ProjectData": {
+    "title1": "React Portfolio Website",
+    "desc1": "Project 1 description",
+    "title2": "Food Ordering Application",
+    "desc2": "Project 2 description"
   }
 }
