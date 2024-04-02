@@ -47,10 +47,25 @@ describe("ArchievementSection in Spanish", () => {
     expect(screen.getByText("Premios")).toBeInTheDocument();
     expect(screen.getByText("Años")).toBeInTheDocument();
   });
+
+  test("renders not correctly in Spanish", () => {
+    render(<ArchievementSection />);
+    const checkNotPresent = (text: string) => {
+      const allElements = screen.queryAllByText(text);
+      const filteredElements = allElements.filter((element) =>
+        element.textContent?.includes(text)
+      );
+      expect(filteredElements.length).toBe(0);
+    };
+    checkNotPresent("Projects");
+    checkNotPresent("Users");
+    checkNotPresent("Awards");
+    checkNotPresent("Years");
+  });
 });
 
 describe("ArchievementSection in English", () => {
-  beforeAll(() => {
+  beforeEach(() => {
     currentLanguage = "EN";
   });
 
@@ -60,5 +75,19 @@ describe("ArchievementSection in English", () => {
     expect(screen.getByText("Users")).toBeInTheDocument();
     expect(screen.getByText("Awards")).toBeInTheDocument();
     expect(screen.getByText("Years")).toBeInTheDocument();
+  });
+  test("renders not correctly in English", () => {
+    render(<ArchievementSection />);
+    const checkNotPresent = (text: string) => {
+      const allElements = screen.queryAllByText(text);
+      const filteredElements = allElements.filter((element) =>
+        element.textContent?.includes(text)
+      );
+      expect(filteredElements.length).toBe(0);
+    };
+    checkNotPresent("Proyectos");
+    checkNotPresent("Usuarios");
+    checkNotPresent("Premios");
+    checkNotPresent("Años");
   });
 });

@@ -9,17 +9,17 @@ const ArchievementSection: React.FC = () => {
   const achievementsList = [
     {
       metric: t("Archievements.projects"),
-      value: "100",
+      value: "50",
       postfix: "+",
     },
     {
       prefix: "~",
       metric: t("Archievements.users"),
-      value: "100,000",
+      value: "100",
     },
     {
       metric: t("Archievements.awards"),
-      value: "7",
+      value: "2",
     },
     {
       metric: t("Archievements.years"),
