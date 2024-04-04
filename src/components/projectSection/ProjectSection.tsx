@@ -71,7 +71,7 @@ const ProjectSection: React.FC = () => {
       <ul ref={ref} className={styles.projects}>
         {filteredProjects.map((project, index) => (
           <motion.li
-            key={index}
+            key={project.id}
             variants={cardVariants}
             initial="initial"
             animate={isInView ? "animate" : "initial"}
