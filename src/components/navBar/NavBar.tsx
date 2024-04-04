@@ -65,7 +65,7 @@ const NavBar: React.FC = () => {
               </li>
             </BrowserRouter>
           </ul>
-          <div className={styles.nav_icon} onClick={handleClick}>
+          <button className={styles.nav_icon} onClick={handleClick}>
             {click ? (
               <span className={styles.icon}>
                 <MenuCloseIcon className={styles.iconMenu} />
@@ -75,7 +75,7 @@ const NavBar: React.FC = () => {
                 <MenuOpenIcon className={styles.iconMenu} />
               </span>
             )}
-          </div>
+          </button>
         </div>
       </nav>
     </header>
