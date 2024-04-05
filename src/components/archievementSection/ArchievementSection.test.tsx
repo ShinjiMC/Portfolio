@@ -1,42 +1,55 @@
-import { render } from "@testing-library/react";
+import { render, waitFor } from "@testing-library/react";
 import ArchievementSection from "./ArchievementSection";
 import { expect, it, vi } from "vitest";
 
-vi.mock("react-animated-numbers", () => ({
-  __esModule: true,
-  default: () => <div>AnimatedNumbers</div>,
-}));
+vi.mock("react-animated-numbers", () => {
+  const MockAnimatedNumbers = ({
+    transitions,
+  }: {
+    transitions: (index: number) => { type: string; duration: number };
+  }) => {
+    const transitionExample = transitions(0);
+    return (
+      <div data-testid="mock-animated-numbers">
+        Transition:
+        {`Type: ${transitionExample.type}, Duration: ${transitionExample.duration}`}
+      </div>
+    );
+  };
+  return {
+    __esModule: true,
+    default: MockAnimatedNumbers,
+  };
+});
 
 vi.mock("react-i18next", async () => {
-  // Importa la implementación original
   const originalModule = await import("react-i18next");
-
   return {
-    // Spread los exports originales para que todo lo demás funcione como de costumbre
     ...originalModule,
-    // Sobrescribe específicamente los métodos que necesitas mockear
     useTranslation: () => ({
       t: (key: string) => key,
-      i18n: { changeLanguage: vi.fn() }, // Añade esto si tu componente llama a changeLanguage u otras funciones de i18n
+      i18n: { changeLanguage: vi.fn() },
     }),
-    // Asegúrate de que cualquier otro export como `initReactI18next` sea también mockeado o devuelto si es necesario
     initReactI18next: { type: "3rdParty", init: vi.fn() },
   };
 });
 
 describe("<ArchievementSection />", () => {
   it("renders correctly", async () => {
-    const { getByText, queryByText } = render(<ArchievementSection />);
+    const { getByText, queryAllByTestId } = render(<ArchievementSection />);
     expect(getByText("Archievements.projects")).toBeInTheDocument();
     expect(getByText("Archievements.users")).toBeInTheDocument();
-    const animatedNumbers = queryByText("AnimatedNumbers");
-    if (animatedNumbers) {
-      expect(animatedNumbers).toBeInTheDocument();
-    } else {
-      // Si no se encuentra, puedes hacer que falle la prueba o imprimir un mensaje de advertencia
-      console.warn(
-        "No se encontró el elemento 'AnimatedNumbers'. La prueba podría ser inestable."
+
+    await waitFor(() => {
+      const mockAnimatedNumbersElements = queryAllByTestId(
+        "mock-animated-numbers"
       );
-    }
+      expect(mockAnimatedNumbersElements.length).toBeGreaterThan(0);
+      mockAnimatedNumbersElements.forEach((element) => {
+        const transitionsText = element.textContent;
+        expect(transitionsText).toContain("Type: spring");
+        expect(transitionsText).toContain("Duration:");
+      });
+    });
   });
 });
