@@ -5,9 +5,11 @@ import styles from "./About.module.scss";
 import { useTranslation } from "react-i18next";
 import "../i18n";
 
-const About: React.FC = () => {
+const About: React.FC<{ initialTab?: string }> = ({
+  initialTab = "skills",
+}) => {
   const { t } = useTranslation();
-  const [tab, setTab] = useState("skills");
+  const [tab, setTab] = useState(initialTab);
   const [, startTransition] = useTransition();
 
   const TAB_DATA = [
@@ -97,7 +99,9 @@ const About: React.FC = () => {
             </TabButton>
           </div>
           <div className={styles.find}>
-            {TAB_DATA.find((t) => t.id === tab)?.content ?? null}
+            {TAB_DATA.find((t) => t.id === tab)?.content ?? (
+              <p>{t("About.NOTTHERE")}</p>
+            )}
           </div>
         </div>
       </div>
