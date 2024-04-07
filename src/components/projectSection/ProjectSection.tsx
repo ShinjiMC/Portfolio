@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import ProjectTag from "../projectTag/ProjectTag";
 import ProjectCard from "../projectCard/ProjectCard";
 import styles from "./ProjectSection.module.scss";
@@ -32,7 +32,6 @@ const ProjectSection: React.FC = () => {
 
   const [tag, setTag] = useState("All");
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
 
   const handleTagChange = (newTag: string) => {
     setTag(newTag);
@@ -74,7 +73,7 @@ const ProjectSection: React.FC = () => {
             key={project.id}
             variants={cardVariants}
             initial="initial"
-            animate={isInView ? "animate" : "initial"}
+            animate="animate"
             transition={{ duration: 0.3, delay: index * 0.4 }}
           >
             <ProjectCard

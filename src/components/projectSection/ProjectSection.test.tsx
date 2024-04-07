@@ -23,26 +23,17 @@ vi.mock("./projectTag/ProjectTag", () => {
 });
 
 interface MotionLiProps {
-  key: number;
   children: React.ReactNode;
-  initial?: string;
-  animate?: string;
   transition?: React.CSSProperties;
 }
-
 vi.mock("framer-motion", () => ({
   motion: {
-    li: ({ children, initial, transition, key, ...props }: MotionLiProps) => (
-      <li
-        key={key}
-        {...props}
-        style={{ ...transition, opacity: initial === "initial" ? 0 : 1 }}
-      >
+    li: ({ children, transition, ...props }: MotionLiProps) => (
+      <li {...props} data-testid="motion-li" style={{ ...transition }}>
         {children}
       </li>
     ),
   },
-  useInView: vi.fn(() => true),
 }));
 
 vi.mock("./projectCard/ProjectCard", () => {
@@ -75,19 +66,5 @@ describe("ProjectSection", () => {
     fireEvent.click(screen.getByText("Project.Web"));
     const webTagButton = screen.getByText("Project.Web");
     expect(webTagButton.className).toMatch(/btnSelected/);
-  });
-
-  it("animates correctly based on isInView value", () => {
-    // setupUseInViewMock(true);
-    // render(<ProjectSection />);
-    // const motionLis = screen.queryAllByTestId("motion-li");
-    // console.log(motionLis);
-    // const firstMotionLi = motionLis[0];
-    // expect(firstMotionLi).toHaveStyle("transform: translateX(0)");
-    // setupUseInViewMock(false);
-    // render(<ProjectSection />);
-    // const motionLiss = screen.queryAllByTestId("motion-li");
-    // const firstMotionLis = motionLiss[0];
-    // expect(firstMotionLis).toHaveStyle("transform: translateX(0)");
   });
 });
