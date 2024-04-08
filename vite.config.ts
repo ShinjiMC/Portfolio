@@ -12,6 +12,7 @@ export default defineConfig({
     mockReset: true,
     coverage: {
       reporter: ["text", "lcov"],
+      exclude: ["**/main.tsx", "**/.eslintrc.cjs"],
     },
   },
 });

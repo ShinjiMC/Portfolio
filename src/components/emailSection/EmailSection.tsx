@@ -13,12 +13,11 @@ const EmailSection: React.FC = () => {
   const form = useRef<HTMLFormElement>(null);
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (!form.current) return;
     emailjs
       .sendForm(
         "service_oevdkoj",
         "template_yxcpg4c",
-        form.current,
+        form.current!,
         "59aFBJlVFNFY0cNLk"
       )
       .then(

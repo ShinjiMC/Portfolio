@@ -49,6 +49,7 @@
     "Description": "Actualmente estoy buscando nuevas oportunidades, mi bandeja de entrada está siempre abierta. Si tienes alguna pregunta o simplemente quieres saludar, ¡haré todo lo posible para responderte!",
     "success": "¡Email enviado correctamente!",
     "error": "Error al enviar el correo electrónico. Por favor, inténtalo de nuevo.",
+    "empty": "Por favor, llena todos los campos.",
     "inputEmail": "Tu correo electrónico",
     "inputSubject": "Asunto",
     "exampleSubject": "Solo saludando",

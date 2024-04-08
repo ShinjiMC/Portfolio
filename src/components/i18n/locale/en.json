@@ -49,6 +49,7 @@
     "Description": "I'm currently looking for new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!",
     "success": "Email sent successfully!",
     "error": "Failed to send email. Please try again.",
+    "empty": "Please fill out all fields.",
     "inputEmail": "Your email",
     "inputSubject": "Subject",
     "exampleSubject": "Just saying hi",
