@@ -65,9 +65,9 @@
     "Mobile": "Mobile"
   },
   "ProjectData": {
-    "title1": "React Portfolio Website",
-    "desc1": "Project 1 description",
-    "title2": "Food Ordering Application",
-    "desc2": "Project 2 description"
+    "title1": "React + TS Portfolio Website",
+    "desc1": "A portfolio website built with React and TypeScript, offering a professional and dynamic showcase of works and projects.",
+    "title2": "Invoice Generation and Product Management Website for a Company using Java Spring Boot and Thymeleaf",
+    "desc2": "Platform developed in Java Spring Boot and Thymeleaf that facilitates invoice generation and inventory management in hardware stores, integrating functionalities for both employees and administrators."
   }
 }

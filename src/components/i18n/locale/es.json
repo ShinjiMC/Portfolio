@@ -65,9 +65,9 @@
     "Mobile": "Móvil"
   },
   "ProjectData": {
-    "title1": "Sitio web de portafolio en React",
-    "desc1": "Descripción del proyecto 1",
-    "title2": "Aplicación de pedidos de comida",
-    "desc2": "Descripción del proyecto 2"
+    "title1": "Sitio web de Portafolio en React + TS",
+    "desc1": "Sitio web de Portafolio desarrollado con React y TypeScript, que ofrece una presentación profesional y dinámica de trabajos y proyectos.",
+    "title2": "Sitio Web de Generación de Boletas y Gestión de Productos para una Empresa en Java Springboot y Thymeleaf",
+    "desc2": "Plataforma desarrollada en Java Springboot y Thymeleaf que facilita la emisión de boletas y el manejo del inventario en ferreterías, integrando funcionalidades para empleados y administradores."
   }
 }
