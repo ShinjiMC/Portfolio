@@ -45,7 +45,7 @@ const EmailSection: React.FC = () => {
             <Link to="https://github.com/ShinjiMC">
               <GithubIcon className={styles.icon} />
             </Link>
-            <Link to="linkedin.com">
+            <Link to="https://www.linkedin.com/in/braulio-nayap-maldonado-casilla-6241bb124/">
               <LinkedinIcon className={styles.icon} />
             </Link>
           </BrowserRouter>

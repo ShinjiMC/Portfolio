@@ -8,6 +8,10 @@ import styles from "./Hero.module.scss";
 
 const Hero: React.FC = () => {
   const { t } = useTranslation();
+  const handleInternalNavigation = (sectionId: string) => {
+    const section = document.querySelector(sectionId);
+    if (section) section.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <section id="home" className={styles.section}>
       <div className={styles.container}>
@@ -43,7 +47,11 @@ const Hero: React.FC = () => {
           <p className={styles.text_container}>{t("Hero.Description")}</p>
           <div>
             <BrowserRouter>
-              <Link to="/#contact" className={styles.contact_button}>
+              <Link
+                to="#"
+                onClick={() => handleInternalNavigation("#contact")}
+                className={styles.contact_button}
+              >
                 {t("Hero.Hire")}
               </Link>
               <Link to="/" className={styles.cv_button}>
