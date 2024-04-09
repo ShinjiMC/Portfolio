@@ -1,0 +1,50 @@
+name: Build and Publish Docker image
+
+on:
+  push:
+    branches:
+      - main # Se ejecuta en commits en la rama principal
+
+jobs:
+  docker-build-and-push:
+    runs-on: ubuntu-latest # El runner de GitHub Actions
+
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Log in to GitHub Container Registry
+        uses: docker/login-action@v1
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          file: ./dockerfile
+          push: true
+          tags: ghcr.io/ShinjiMC/Portfolio/portfolio:latest
+
+  compress-and-upload:
+    needs: docker-build-and-push
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Compress files
+        run: tar -czvf package.tar.gz ./Dockerfile ./.github/workflows/docker.yml
+
+      - name: Upload compressed file as artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: docker-package
+          path: package.tar.gz

@@ -15,4 +15,8 @@ export default defineConfig({
       exclude: ["**/.eslintrc.cjs"],
     },
   },
+  server: {
+    port: 3000,
+    strictPort: true,
+  },
 });

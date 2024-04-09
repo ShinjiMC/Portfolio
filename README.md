@@ -1,3 +1,7 @@
+[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC_BY--NC--SA_4.0-lightgrey.svg)](https://github.com/ShinjiMC/Portfolio/blob/main/LICENSE)
+[![React CI](https://github.com/ShinjiMC/Portfolio/actions/workflows/build.yml/badge.svg)](https://github.com/ShinjiMC/Portfolio/actions/workflows/build.yml)
+[![Docker Image CI](https://github.com/ShinjiMC/Portfolio/actions/workflows/docker.yml/badge.svg)](https://github.com/ShinjiMC/Portfolio/actions/workflows/docker.yml)
+
 # Portfolio by Braulio Maldonado Casilla
 
 @ShinjiMC - By Braulio Nayap Maldonado Casilla

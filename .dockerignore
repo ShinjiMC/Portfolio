@@ -1,0 +1,12 @@
+node_modules
+.git
+.gitignore
+.dockerignore
+Dockerfile
+.eslintrc.cjs
+.github
+.gitlab
+coverage
+README.md
+LICENSE
+\*.md
