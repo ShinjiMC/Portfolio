@@ -23,10 +23,10 @@ const ProjectSection: React.FC = () => {
       id: 2,
       title: t("ProjectData.title2"),
       description: t("ProjectData.desc2"),
-      image: "./images/projects/1.png",
+      image: "./images/projects/2.png",
       tag: ["All", "Web"],
       gitUrl: "https://github.com/ShinjiMC/Spring_Security_Thymeleaf",
-      previewUrl: "",
+      previewUrl: "https://spring-security-thymeleaf.onrender.com",
     },
   ];
 
